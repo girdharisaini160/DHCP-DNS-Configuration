@@ -1,0 +1,10 @@
+! Router Configuration for DHCP/DNS Project
+hostname Router
+interface GigabitEthernet0/0
+ ip address 192.168.1.1 255.255.255.0
+ no shutdown
+!
+ip dhcp relay information trusted
+ip helper-address 192.168.1.10   ! Forward DHCP requests to Server
+!
+end
